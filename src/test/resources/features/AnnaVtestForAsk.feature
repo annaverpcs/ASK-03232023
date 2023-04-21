@@ -17,7 +17,7 @@
      #Then I wait for 3 sec
       And I click on element with xpath "//span[contains(text(),'Create New Quiz')]"
       And I wait for 1 sec
-      Then I type "01 Anna V Quiz name" into element with xpath "//input[@formcontrolname='name']"
+      Then I type "03 Anna V Quiz name" into element with xpath "//input[@formcontrolname='name']"
       And I click on element with xpath "//mat-icon[contains(text(),'add_circle')]"
       And I wait for 1 sec
       And I click on element with xpath "//mat-radio-button[2]"
@@ -31,3 +31,12 @@
       And I wait for 3 sec
       Then element with xpath "//mat-panel-title[contains(text(),'01 Anna V Quiz name')]" should contain text "01 Anna V Quiz name"
       And I wait for 5 sec
+
+      #delete the quiz
+      Then I click on element with xpath "//mat-panel-title[contains(text(),'03 Anna V Quiz name')]"
+      Then I click on element with xpath "//mat-panel-title[contains(text(),'03 Anna V Quiz name')]/../../..//button[@class='mat-raised-button mat-warn']"
+      Then I click on element with xpath "//div[@class='mat-dialog-actions']//span[contains(text(),'Delete')]"
+      #Then I click on element with xpath "//div[@class='mat-dialog-actions']//button[@class='mat-raised-button mat-warn']"
+
+      And I wait for 3 sec
+      Then element with xpath "//mat-panel-title[contains(text(),'02 Anna V Quiz name')]" should not be present
