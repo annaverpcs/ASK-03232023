@@ -16,6 +16,6 @@
       Then I click on element with xpath " //h5[contains(text(),'Quizzes')]"
       Then I wait for element with xpath "//h4[contains(text(),'List of Quizzes')]" to be present
 
-    @asktest1
-    Scenario: Two options is created by defolt in a Single-Choice radio button selection
+    @asktest2
+    Scenario: Up to 15 options can be created in a single-choice question
 
