@@ -5,7 +5,7 @@
 
 
     @asktest1
-    Scenario: Two options is created by defolt in a Single-Choice radio button selection
+    Scenario: Two options is created by defolt in a Single-Choice radio button selectio
       Given I open url "http://ask-int.portnov.com/#/login"
       Then I should see page title contains "Assessment Control"
       And I type "hsood@nswgovernment.cf" into element with xpath "//input[@formcontrolname='email']"
@@ -15,7 +15,4 @@
       Then element with xpath "//p[contains(text(),'TEACHER')]" should be present
       Then I click on element with xpath " //h5[contains(text(),'Quizzes')]"
       Then I wait for element with xpath "//h4[contains(text(),'List of Quizzes')]" to be present
-
-    @asktest1
-    Scenario: Two options is created by defolt in a Single-Choice radio button selection
 
