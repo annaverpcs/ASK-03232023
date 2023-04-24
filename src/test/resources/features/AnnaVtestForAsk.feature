@@ -31,3 +31,5 @@
       And I wait for 3 sec
       Then element with xpath "//mat-panel-title[contains(text(),'01 Anna V Quiz name')]" should contain text "01 Anna V Quiz name"
       And I wait for 5 sec
+      
+      #delete the quiz
