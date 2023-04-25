@@ -17,7 +17,7 @@
      #Then I wait for 3 sec
       And I click on element with xpath "//span[contains(text(),'Create New Quiz')]"
       And I wait for 1 sec
-      Then I type "01 Anna V Quiz name" into element with xpath "//input[@formcontrolname='name']"
+      Then I type "03 Anna V Quiz name" into element with xpath "//input[@formcontrolname='name']"
       And I click on element with xpath "//mat-icon[contains(text(),'add_circle')]"
       And I wait for 1 sec
       And I click on element with xpath "//mat-radio-button[2]"
@@ -31,5 +31,51 @@
       And I wait for 3 sec
       Then element with xpath "//mat-panel-title[contains(text(),'01 Anna V Quiz name')]" should contain text "01 Anna V Quiz name"
       And I wait for 5 sec
+<<<<<<< HEAD
       
       #delete the quiz
+=======
+
+      #delete the quiz
+      Then I click on element with xpath "//mat-panel-title[contains(text(),'03 Anna V Quiz name')]"
+      Then I click on element with xpath "//mat-panel-title[contains(text(),'03 Anna V Quiz name')]/../../..//button[@class='mat-raised-button mat-warn']"
+      Then I click on element with xpath "//div[@class='mat-dialog-actions']//span[contains(text(),'Delete')]"
+      #Then I click on element with xpath "//div[@class='mat-dialog-actions']//button[@class='mat-raised-button mat-warn']"
+
+      And I wait for 3 sec
+      Then element with xpath "//mat-panel-title[contains(text(),'02 Anna V Quiz name')]" should not be present
+
+    @asktest2
+    Scenario Outline: Student registration
+      Given I open url "http://ask-int.portnov.com/#/registration"
+      And I type "<sFirstName>" into element with xpath "//input[@formcontrolname='firstName']"
+      And I type "<sLastName>" into element with xpath "//input[@formcontrolname='lastName']"
+      And I type "<sEmail>" into element with xpath "//input[@formcontrolname='email']"
+      And I type "<sGroup>" into element with xpath "//input[@formcontrolname='group']"
+      And I type "<sPassword>" into element with xpath "//input[@formcontrolname='password']"
+      And I type "<sConfirmPassword>" into element with xpath "//input[@formcontrolname='confirmPassword']"
+      Then I click on element with xpath "//span[contains(text(),'Register Me')]"
+      Then AV retrieve activation information for email <sEmailAddress>
+      And AV activate the user
+      Examples:
+        | sFirstName  | sLastName |  sEmail |  sGroup | sPassword | sConfirmPassword | sEmailAddress |
+        | James | Bond  | jamesbond2@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond2@abc.com" |
+        | James | Bond  | jamesbond5@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond5@abc.com" |
+
+    @asktest3
+    Scenario Outline: Student registration
+      Given AV open "ASK Registration"
+      And AV type "<sFirstName>" into element with xpath "FirstName"
+      And AV type "<sLastName>" into element with xpath "LastName"
+      And I type "<sEmail>" into element with xpath "//input[@formcontrolname='email']"
+      And I type "<sGroup>" into element with xpath "//input[@formcontrolname='group']"
+      And I type "<sPassword>" into element with xpath "//input[@formcontrolname='password']"
+      And I type "<sConfirmPassword>" into element with xpath "//input[@formcontrolname='confirmPassword']"
+      Then I click on element with xpath "//span[contains(text(),'Register Me')]"
+      Then AV retrieve activation information for email <sEmailAddress>
+      And AV activate the user
+      Examples:
+        | sFirstName  | sLastName |  sEmail |  sGroup | sPassword | sConfirmPassword | sEmailAddress |
+        | James | Bond  | jamesbond2@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond2@abc.com" |
+        | James | Bond  | jamesbond5@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond5@abc.com" |
+>>>>>>> main
