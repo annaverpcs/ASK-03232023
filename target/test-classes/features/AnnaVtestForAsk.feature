@@ -31,6 +31,10 @@
       And I wait for 3 sec
       Then element with xpath "//mat-panel-title[contains(text(),'01 Anna V Quiz name')]" should contain text "01 Anna V Quiz name"
       And I wait for 5 sec
+<<<<<<< HEAD
+      
+      #delete the quiz
+=======
 
       #delete the quiz
       Then I click on element with xpath "//mat-panel-title[contains(text(),'03 Anna V Quiz name')]"
@@ -74,3 +78,4 @@
         | sFirstName  | sLastName |  sEmail |  sGroup | sPassword | sConfirmPassword | sEmailAddress |
         | James | Bond  | jamesbond2@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond2@abc.com" |
         | James | Bond  | jamesbond5@abc.com | 123   | 12345ABc | 12345ABc  | "jamesbond5@abc.com" |
+>>>>>>> main
