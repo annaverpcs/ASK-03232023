@@ -235,4 +235,11 @@ public class PredefinedStepDefs {
             }
         }
     }
+
+    @Then("element with xpath {string} should be same as element with xpath {string}")
+    public void elementWithXpathShouldBeSameAsElementWithXpath(String xpath1, String xpath2) {
+        String updatedAtTime = getDriver().findElement(By.xpath(xpath1)).getText();
+        String createdAtTime = getDriver().findElement(By.xpath(xpath2)).getText();
+        assertThat(updatedAtTime).isEqualTo(createdAtTime);
+    }
 }
