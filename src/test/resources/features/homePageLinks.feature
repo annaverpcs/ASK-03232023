@@ -16,3 +16,9 @@
       Then I click on element with xpath "//span[contains(text(),'Go To Submissions')]"
       And I wait for 2 sec
       Then element with xpath "//h4[contains(text(),'Submissions')]" should be displayed
+
+    @askTestcase2
+    Scenario: Teacher home links - Go To Assignments
+      Then I click on element with xpath "//span[contains(text(),'Go To Assignments')]"
+      And I wait for 2 sec
+      Then element with xpath "//mat-accordion[@class='mat-accordion']" should be displayed
