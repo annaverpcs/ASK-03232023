@@ -104,3 +104,4 @@
       And I click on element with xpath "//span[contains(text(),'Save')]"
       And I wait for 1 sec
       Then element with xpath "//mat-panel-title[contains(text(),'01 Anna V Quiz name')]" should contain text "01 Anna V Quiz name"
+
