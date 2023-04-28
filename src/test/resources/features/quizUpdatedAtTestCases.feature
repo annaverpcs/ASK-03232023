@@ -33,9 +33,6 @@
       Then element with xpath "//div[@class='quizzes']" should contain text "001 Yu G Test"
       And I wait for 5 sec
 
-#      #Check the updated time for new quiz
-#      Then I click on element with xpath "//div[@class='quizzes']/../../..//mat-panel-title[contains(text(),'001 Yu G Test')]"
-#      Then element with xpath "xpath1" should be same as element with xpath "xpath2"
-#
-#      And I wait for 3 sec
-#      Then element with xpath "//mat-panel-title[contains(text(),'02 Anna V Quiz name')]" should not be present
+      #Check the updated time for new quiz
+      Then I click on element with xpath "//div[@class='quizzes']/../../..//mat-panel-title[contains(text(),'001 Yu G Test')]"
+      Then element with xpath "//mat-panel-title[contains(text(),'001 Yu G Test')]/../../..//tr[5]/td[2]" should be same as element with xpath "//mat-panel-title[contains(text(),'001 Yu G Test')]/../../..//tr[4]/td[2]"
