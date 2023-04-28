@@ -15,7 +15,7 @@
       Then I wait for element with xpath "//h4[contains(text(),'Management')]" to be present
       Then I click on element with xpath "//h4[contains(text(),'Rocco Baroccos')]"
       Then I wait for element with xpath "//button[@class='mat-raised-button mat-accent']" to be present
-      Then I click on element with xpath "//button[@class='mat-raised-button mat-accent']"
+      Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-accent']"
       And I wait for element with xpath "//mat-icon[contains(text(),'delete')]" to be present
       Then I click on element using JavaScript with xpath "//button[@role='menuitem'][4]"
       And I wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
@@ -41,7 +41,7 @@
         Then I wait for element with xpath "//h4[contains(text(),'Management')]" to be present
         Then I click on element with xpath "//h4[contains(text(),'Rocco Baroccos')]"
         Then I wait for element with xpath "//button[@class='mat-raised-button mat-accent']" to be present
-        Then I click on element with xpath "//button[@class='mat-raised-button mat-accent']"
+        Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-accent']"
         And I wait for element with xpath "//mat-icon[contains(text(),'delete')]" to be present
         Then I click on element using JavaScript with xpath "//button[@role='menuitem'][4]"
         And I wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
@@ -61,7 +61,7 @@
         Then I click on element with xpath "//h4[contains(text(),'Rocco Baroccos')]"
         Then I wait for element with xpath "//button[@class='mat-raised-button mat-accent']" to be present
         Then element with xpath "//div[contains(text(),'No Assignments Yet')]" should be present
-        Then I click on element with xpath "//button[@class='mat-raised-button mat-accent']"
+        Then I click on element using JavaScript with xpath "//button[@class='mat-raised-button mat-accent']"
         And I wait for element with xpath "//mat-icon[contains(text(),'delete')]" to be present
         Then I click on element using JavaScript with xpath "//button[@role='menuitem'][4]"
         And I wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
@@ -80,6 +80,7 @@
         Then I wait for element with xpath "//h4[contains(text(),'Management')]" to be present
         Then I click on element with xpath "//h4[contains(text(),'Rosa Spike')]"
         Then I wait for element with xpath "//button[@class='mat-raised-button mat-accent']" to be present
+        Then I wait for 3 sec
         Then element with xpath "//div[contains(text(),'No Assignments Yet')]" should not be present
         Then I click on element with xpath "//button[@class='mat-raised-button mat-accent']"
         And I wait for element with xpath "//mat-icon[contains(text(),'delete')]" to be present
@@ -99,7 +100,7 @@
         And I click on element with xpath "//h5[contains(text(),'Management')]"
         Then I wait for element with xpath "//h4[contains(text(),'Management')]" to be present
         Then I click on element with xpath "//div[@class='mat-tab-label mat-ripple ng-star-inserted']"
-        Then I click on element using JavaScript with xpath "//h4[contains(text(),'Irin Soroka')]"
+        Then I click on element using JavaScript with xpath "//h4[contains(text(),'Gloria Junior')]"
         Then I wait for 3 sec
         Then I wait for element with xpath "//span[@class='mat-button-wrapper']" to be present
         Then I click on element with xpath "//span[@class='mat-button-wrapper']"
@@ -108,7 +109,7 @@
         Then I wait for 3 sec
         And I wait for element with xpath "//h1[contains(text(),'Confirmation')]" to be present
         Then I click on element with xpath "//span[contains(text(),'Delete')]"
-        Then element with xpath "//h4[contains(text(),'Irin Soroka')]" should not be present
+        Then element with xpath "//h4[contains(text(),'Gloria Junior')]" should not be present
 
     @deleteusertests6
       Scenario: Teacher login
