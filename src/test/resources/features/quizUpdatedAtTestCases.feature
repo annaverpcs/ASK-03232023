@@ -1,6 +1,6 @@
 #Automate test set ASK0323-236 of ASK application
 #Author: Yu Gong
-  @askTestCase
+  @quizUpdateTime
   Feature: Quiz - Updated At
 
     Background:
@@ -11,7 +11,7 @@
       And I wait for 5 sec
       Then element with xpath "//p[contains(text(),'TEACHER')]" should be present
 
-    @askTestCase1
+    @quizUpdateTime1
     Scenario: Updated time for new quiz
       Then I click on element with xpath "//h5[contains(text(),'Quizzes')]"
       And I wait for 2 sec
