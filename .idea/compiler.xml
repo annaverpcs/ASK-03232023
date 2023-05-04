@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ASK-03232023" target="11" />
+      <module name="ASK-03232023" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
